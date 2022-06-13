@@ -1,0 +1,25 @@
+import pandas as pd
+import numpy as np
+
+dataset = pd.read_csv(r"/Users/mac/Downloads/Datasets/practice_dataset-main/IRIS.csv")
+# Get top 5 rows of the dataset
+print(dataset.head(5))
+
+# Get column "Species" for all lines where Petal.Length < 2
+
+print(dataset['species'].loc[dataset['petal_width'] < 2])
+
+#mathametical information about each data present in the dataset
+print(dataset.describe())
+
+# number of unique values in each column
+print(dataset.nunique())
+
+#mean value of petal.length
+print(dataset.petal_length.mean())
+
+#unique values with their count in a column
+print(dataset.petal_width.value_counts())
+
+# searching for null value
+print(dataset.isnull().any())
